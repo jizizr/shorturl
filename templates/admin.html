@@ -1,0 +1,31 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>简易短链</title>
+    <!-- Bootstrap core CSS -->
+  <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+  </head>
+  <table class="table table-condensed">
+    <caption>后台管理</caption>
+      <thead>
+        <tr>
+          <th>短域</th>
+          <th>内容</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in rows %}
+        <tr>
+          <td>{{i[0]}}</td>
+          <td>{{i[1]}}</td>
+          <td><a href="./admin?url={{i[1]}}">删除</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</html>

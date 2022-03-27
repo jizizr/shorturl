@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>简易短链</title>
+    <!-- Bootstrap core CSS -->
+<link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='signin.css') }}" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    
+<main class="form-signin">
+  <form method="post">
+    <h1 class="h3 mb-3 fw-normal">后台管理</h1>
+
+    <div class="form-floating">
+      <input type="text" name="user" class="form-control" id="floatingInput">
+      <label for="floatingInput">Username:</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" name="pwd" class="form-control" id="floatingInput">
+      <label for="floatingInput">Password</label>
+    </div>
+
+    <button class="w-100 btn btn-lg btn-primary" type="submit">login</button>
+  </form>
+</main>
+
+
+    
+  </body>
+</html>
